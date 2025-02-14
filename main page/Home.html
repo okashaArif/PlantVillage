@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homestyle.css">
+    <link rel="shortcut icon" href="icons8-leaf-32.ico" type="image/x-icon">
+    <title>Leafio</title>
+</head>
+<body>
+    <section class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Okasha_logo.png" alt="Your Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <span class="user-greeting">Hi, Username</span>
+            <div class="dropdown">
+                <div class="dropdown-toggle" id="user-menu-toggle">▼</div>
+                <div class="dropdown-content" id="user-menu-content">
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-heading-big">Your Ultimate Plant Health Companion!</h1>
+            <br>
+            <p class="hero-paragraph">Welcome to our revolutionary leaf diagnosis platform! Discovering and combatting plant diseases has never been easier.Our user-friendly interface and expert recommendations will empower you to protect your green companions. Let's nurture healthier, happier gardens together!</p>
+            <br>
+            <a href="#" class="hero-button">Learn More</a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="Service1.jpg" alt="Service 1" class="service-image">
+            <h3>Classification</h3>
+            <p>Our leaf classification service uses cutting-edge AI to accurately identify and categorize leaves, aiding in precise disease diagnosis.</p>
+        </div>
+        <div class="service">
+            <img src="service2.jpg" alt="Service 2" class="service-image">
+            <h3>Recommendation</h3>
+            <p>Our leaf classification service offers precise recommendations for healthier plants, ensuring your garden thrives. Grow with confidence!</p>
+        </div>
+        <div class="service">
+            <img src="service3.jpg" alt="Service 3" class="service-image">
+            <h3>Chatbot</h3>
+            <p>Our chatbot swiftly classifies leaves, aiding in plant disease identification and care. Simplify gardening with our efficient leaf analysis!</p>
+        </div>
+    </section>
+    
+    <section class="upload-image">
+        <h2>Upload Image</h2>
+        <div class="upload-options">
+            <div class="drag-and-drop">
+                <p>Drag and drop your image here</p>
+                <input type="file" id="fileInput" accept="image/*" onchange="displayFileName()">
+            </div>
+        </div>
+        <br>
+        <p id="uploadedFileName"></p>
+        <button id="submitBtn" disabled>Submit</button>
+    </section>
+    
+    
+    
+    <section class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>At Leafio, we are passionate about the world of plants and committed to helping you cultivate thriving gardens. Our dedicated team  has harnessed the power of technology to create a seamless leaf classification system. With years of research and innovation, we aim to simplify the process of identifying plant leaves and diagnosing diseases. Join us on this green journey as we make gardening more accessible and enjoyable for everyone.</p>
+            <img src="about.jpg" alt="About Us Image">
+        </div>
+    </section>
+    
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email Address">
+            <textarea id="response" placeholder="Your Message"></textarea>
+            <div class="btn-container">
+                <button id="SubmitBtn">Submit</button>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Leafio</p>
+    </footer>
+
+    
+    
+</body>
+<script>
+function displayFileName() {
+    const fileInput = document.getElementById("fileInput");
+    const uploadedFileName = document.getElementById("uploadedFileName");
+    const submitBtn = document.getElementById("submitBtn");
+
+    if (fileInput.files.length > 0) {
+        const fileName = fileInput.files[0].name;
+        uploadedFileName.textContent = `Selected File: ${fileName}`;
+        submitBtn.removeAttribute("disabled");
+    } else {
+        uploadedFileName.textContent = "";
+        submitBtn.setAttribute("disabled", "true");
+    }
+}
+        const userMenuToggle = document.getElementById('user-menu-toggle');
+        const userMenuContent = document.getElementById('user-menu-content');
+
+        // Toggle the dropdown when the user clicks the arrow
+        userMenuToggle.addEventListener('click', () => {
+            if (userMenuContent.style.display === 'block') {
+                userMenuContent.style.display = 'none';
+            } else {
+                userMenuContent.style.display = 'block';
+            }
+        });
+
+        // Close the dropdown when clicking anywhere outside of it
+        document.addEventListener('click', (event) => {
+            if (!userMenuContent.contains(event.target) && event.target !== userMenuToggle) {
+                userMenuContent.style.display = 'none';
+            }
+        });
+</script>
+    
+</body>
+</html>

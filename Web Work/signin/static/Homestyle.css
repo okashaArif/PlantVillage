@@ -1,0 +1,394 @@
+/* Reset some default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    filter: brightness(1);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Set the background color and text color for the whole page */
+body {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation */
+ nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    max-height: 100px;
+} 
+
+.hero {
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff; /* Text color on top of the background image */
+    padding: 300px 0; /* Adjust padding as needed */
+}
+.logo  {
+    width: fit-content;
+    max-height: 120px; /* Adjust the height as needed */
+  margin-right: auto;
+    object-fit: contain;
+} 
+
+.navbar {
+    background-color: transparent; /* Transparent background for the navigation bar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo img {
+    max-height: 80px;
+    margin-top: 9px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-right: 29.5%;
+    margin-top: 43px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 10px;
+}
+
+.nav-links a:hover {
+    color: #4CAF50; /* Hover color for links */
+}
+
+.user-greeting {
+    font-weight: bold;
+    margin-top: 43px;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 22px 40px;
+    background-color: #4CAF50; /* Green theme color */
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 27px;
+    margin-right: 2%;
+    transition: background-color 0.3s ease;
+}
+.hero-content{
+    align-content: center;
+}
+.hero-button:hover {
+    background-color: #333333; /* Darker color on hover */
+}
+.hero-heading-big{
+    width: 60%;
+    margin-left: 20%;
+    font-size: 90px; /* Adjust the size as needed for your theme */
+    color: #fff; /* Theme color for heading one */
+    margin-bottom: 8px; /* Add spacing between headings */
+}
+.hero-paragraph{
+    width: 50%;
+    margin-left: 25%;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* Style the services section */
+.services {
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    height: 90px;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.service p {
+    font-size: 16px;
+    width: 76%;
+    text-align: left;
+    margin-left: 12%;
+    line-height: 1.5;
+}
+
+.service {
+    display: inline-block;
+    margin: 0 7%; /* Add some spacing between services */
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0,0.2);
+    border-radius: 5%;
+    height: 450px;
+}
+
+.service-image {
+    width: 190px; /* Adjust the image size as needed */
+    height: 200px; /* Adjust the image size as needed */
+    border-radius: 20%; /* Make the image round */
+    margin-bottom: 30px;
+    margin-top: 20px;
+    object-fit: cover; /* Maintain aspect ratio for the image */
+}
+
+
+/* Style the footer */
+footer {
+    background-color: #333333; /* Dark background for the footer */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* General styles for links and buttons */
+a.button, button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover, button:hover {
+    background-color: #333333;
+}
+
+/* Style the About Us section */
+.about {
+    background-color: #ffffff; /* White background for the About Us section */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    height: 90px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Add rounded corners to the image */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect to the image */
+}
+/* Style the Upload Image section */
+.upload-image {
+    background-color: #fff; /* Light gray background for the Upload Image section */
+     padding: 40px 0;
+    text-align: center;
+}
+
+.upload-image h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    height: 90px;
+}
+
+.upload-options {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 355px;
+}
+
+.drag-and-drop {
+    border: 2px dashed #4CAF50;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag-and-drop p {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-top: 2px;
+    margin-right: 15px;
+}
+
+#submitBtn {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 22px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:disabled {
+    background-color: #999999; /* Gray out the button when disabled */
+     cursor: not-allowed;
+}
+
+#submitBtn:hover {
+    background-color: #333333;
+} 
+
+
+/* Style the Contact Us section */
+.contact-us {
+    background-color: #fff; /* Light gray background for the section */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-us h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    height: 90px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 200px; /* Adjust the height as needed */
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+#SubmitBtn {
+    background-color: #4CAF50; /* Green theme color */
+    color: #ffffff;
+    padding: 22px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#SubmitBtn:hover {
+    background-color: #333333; /* Darker color on hover */
+}
+
+
+
+/* for dropdown */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 13px;
+    margin-left: 3px;
+    margin-top: 43px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    border: 1px;
+    padding: 10px;
+    right: -26px;
+    
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+

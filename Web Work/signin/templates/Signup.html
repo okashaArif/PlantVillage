@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Loginsstyles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/static/icons8-leaf-32.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e6c9e55b31.js" crossorigin="anonymous"></script>
+    <title>Leafio</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+                <img src="/static/Okasha_logo.png" alt="">
+            <div class="text-sci">
+                <h2>From Leaf to Identification: We've Got You Covered</h2>
+
+                <div class="social-icons">
+                    <a href=""><i class='bx bxl-linkedin' ></i></a>
+                    <a href=""><i class='bx bxl-facebook' ></i></a>
+                    <a href=""><i class='bx bxl-instagram' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="logreg-box">
+                <div class="form-box">
+                    <form action="" method="post">{% csrf_token %}
+                        <h2>Sign Up</h2>
+                        {% for message in messages %}
+                        <div class="'alert alert-{{ message.tags }} fade show" role="alert">
+                            {{message}}
+                        </div>
+                        {% endfor %}
+
+                        
+                        <div class="input-box">
+                            <span class="icons"><i class='bx bx-user'></i></span>
+                            <input type="text" name="name" required>
+                            <label >Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icons"><i class='bx bx-envelope'></i></span>
+                            <input type="email" name="email" required>
+                            <label >Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icons"><i class='bx bx-lock-alt' ></i></span>
+                            <input type="password" name="password" required>
+                            <label >Password</label>
+                        </div>
+                        <div class="button">
+                        <button type="submit" class="btn">Sign In</button></div>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="{% url 'Signin' %}" class="register-link">Sign In</a></p>
+                        </div>
+                    </form>
+
+                </div>
+                </div>
+            
+        </div>
+</body>
+
+</html>
